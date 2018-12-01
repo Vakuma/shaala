@@ -1,0 +1,32 @@
+<!-- ---------------------  Login  ---------------------------------- -->
+<div class="login-wrapper">
+  <div class="page-container">
+    <div class="login-container">
+      <img class="login-img" src="../../assets/Images/logo.png" alt="login thumb">
+      <form class="form-signin" #loginForm="ngForm" (ngSubmit)="login(UserName.value,Password.value)">
+        <div class="floatlabel-wrapper" style="position:relative">
+          <!-- <label for="inputEmail" class="label-floatlabel login-label ">Email Address</label> -->
+          <input type="text" id="inputEmail" class="form-control floatlabel" #UserName ngModel name="UserName" autocomplete="off"
+            placeholder="Username" class="form-control" required>
+        </div>
+
+        <div class="floatlabel-wrapper" style="position:relative">
+          <!-- <label for="inputPassword" class="label-floatlabel login-label ">Password</label> -->
+          <input type="password" #Password ngModel name="Password" placeholder="Password" class="form-control" required>
+        </div>
+        <br>
+        <button [disabled]="!loginForm.valid" [routerLink]="['/home', 'welcome']" class="btn btn-primary theme-btn fullWidth" type="submit">Sign In</button>
+      </form>
+
+      <a class="forgot-password pointer" [routerLink]="['/home', 'change-pass']">
+        Forgot Password?
+      </a>
+    </div>
+    <div class="create-account">
+      <a href="#">
+        Create Account
+      </a>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,90 @@
+.fa-eye{
+    position: absolute;
+    right:30px;
+    top:12px;
+    color:grey;
+}
+
+.fa-eye:hover{
+    color:black;
+}
+
+.pwdRules{
+    font-size: 12px;
+    width: 350px;
+    border: 1px solid #eae5e5;
+    padding: 20px 20px 20px 40px;
+    background: #fcfcfc;
+   
+}
+
+button[disabled] {
+    cursor:not-allowed;
+}
+
+.help-block.err {
+    color: orange;
+    font-size: 13px;
+}
+
+.g-style {
+    line-height: 120px;
+    text-align: center;
+    display: block;
+    font-size: 52px;
+    border: 1px solid #009688;
+    border-radius: 100%;
+    background: #eefffd;
+    width: 120px;
+    color: #2ebbc0;
+}
+.g-s {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid lightgray;
+}
+
+td, th {
+    border: 0px solid transparent !important;
+}
+
+.p-left {
+    padding-left: 90px;
+}
+
+
+/* .msgs {
+    line-height: 32px;
+    padding-left: 62px;
+    border: 1px solid transparent;
+    font-size: 13px;
+    position: relative;
+}
+
+.msgs:after {
+    content: "";
+    position: absolute;
+    top:-1px;
+    left: 0px;
+    width:32px;
+    height:33px;
+    background: #4CAF50;
+}
+
+#errorMsg {
+    border: 1px solid #ff9800;
+    color: #ff9800;
+    display: none;
+}
+#errorMsg:after {
+    content: "\e083";
+    background: #ff9800;
+}
+#successMsg {
+    border: 1px solid #4CAF50;
+    color: #4CAF50;
+}
+#successMsg:after {
+    background: #4CAF50;
+} */

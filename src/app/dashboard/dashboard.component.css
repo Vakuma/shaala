@@ -1,0 +1,93 @@
+body {
+    background: white;
+}
+.iconic-w-horizontal {
+    padding: 10px;
+    background-color: #009fb3 !important;
+    position: relative;
+}
+.iconic-w-horizontal .ico-block {
+    width: 46px;
+    height: 42px;
+    font-size: 24px;
+}
+.iconic-w-horizontal .w-meta-info {
+    padding-left: 10px;
+}
+.light-text .w-meta-value {
+    font-size: 22px;
+}
+.w-info-graph .w-info-chart .w-info-chart-header {
+    padding: 25px;
+}
+.mini-chart-list {
+    padding: 25px;
+    padding-top: 0;
+}
+
+.box-tab .nav-tabs,
+.box-tab .tabs-left > .nav-tabs > li > a {
+    min-width: 185px !important;
+    text-align: left;
+    font-size: 14px;
+}
+
+.box-tab .tab-content {
+    margin-left: 185px;
+}
+
+.box-tab .tabs-left > .nav-tabs > li > a > i {
+    margin: 10px 8px 10px 14px
+}
+.book-txt {
+    font-size: 14px;
+}
+.marks-details .w-meta-info .w-meta-title {
+    font-size: 13px;
+    padding-bottom: 5px;
+}
+.marks-details .ico-block {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+}
+.marks-details .w-meta-value {
+    font-size: 20px;
+    padding-bottom: 0px;
+}
+.page-breadcrumb {
+    margin-bottom: 20px;
+}
+.charts-deep-view .w-info-graph {
+    border: 0px;
+}
+
+#recent-user .box-widget {
+    border: 0px;
+}
+
+ol {
+    margin: 0;
+    padding-left: 15px;
+    margin-top: 20px;
+}
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid transparent;
+}
+.back-btn {
+    position: absolute;
+    right: 19px;
+    bottom: -10px;
+}
+.download-link {
+    position: absolute;
+    top: 15px;
+    right: 60px;
+    background: #86c7f3;
+    padding: 8px 14px;
+    color: white;
+    cursor: pointer;
+}

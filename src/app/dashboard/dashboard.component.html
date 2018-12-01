@@ -1,0 +1,249 @@
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <div class="box-tab clearfix">
+      <div class="tabs-left clearfix">
+        <!-- Only required for left/right tabs -->
+        <ul class="nav nav-tabs tab-tooltip">
+          <li *ngFor="let book of books; let i = index;">
+            <a href="#recent-user" title="Recent User " (click)="subjectData(book.name)" data-toggle="tab">
+              <i class="fa fa-book"></i> <span class="book-txt"> {{ book.name }} </span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content" *ngIf="initialHide">
+          <div class="tab-pane active" id="recent-user">
+            <!-- <h4 class="pane-header">Users</h4> -->
+            <div class="row" *ngIf="!showMore">
+              <div class="col-md-12">
+                <div class="box-widget widget-module">
+                  <div class="widget-container">
+                    <div class="widget-block">
+                      <div class="marks-details">
+                        <div class="row">
+                          <div class="col-md-2" *ngFor="let data of subjData.marks; let i = index;">
+                            <div class="iconic-w-horizontal w_bg_teal light-text">
+                              <div class="w-meta-info number-rotate">
+                                <span class="w-meta-value number-animate" data-animation-duration="1500"> {{ data.marks
+                                  }} </span>
+                                <span class="w-meta-title">{{data.name}}</span>
+                              </div>
+                              <span class="left-bar"> &nbsp; </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="w-info-graph">
+                        <div class="clearfix">
+                          <div class="col-md-7">
+                            <div class="w-info-chart">
+                              <div class="w-info-chart-header">
+                                <h2 class="text-left"> Data Insights </h2>
+                                <ol>
+                                  <li *ngFor="let insight of subjData.insights; let i = index;">
+                                    {{ insight.name }}
+                                  </li>
+                                </ol>
+                                <hr>
+                                <h2 class="text-left"> Select to view </h2>
+                                <ol style="margin-left: -15px;">
+                                  <div class="radio">
+                                    <label><input type="radio" (click)="showMoreDetails('chapter')" name="optradio">
+                                      Chapter wise </label>
+                                  </div>
+                                  <div class="radio">
+                                    <label><input type="radio" (click)="showMoreDetails('question')" name="optradio">
+                                      Question-Paper wise </label>
+                                  </div>
+                                </ol>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-5">
+                            <div class="w-info-chart-meta">
+                              <h2 class="text-center">Class Standings</h2>
+                              <div style="display: block">
+                                <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+                                  (chartHover)="pieCharttHovered($event)" (chartClick)="pieChartClicked($event)">
+                                </canvas>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="back-btn">
+                          <button class="btn btn-info" (click)="initialHide = false"> Back to report card </button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="tab-content" *ngIf="!initialHide">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="table-responsive">
+                <table class="table table-hover table-bordered matmix-dt bg-hc-border">
+                  <thead>
+                    <tr>
+                      <th colspan="7">
+                        <div class="dt-col-header text-center"> {{ selectedExamName }} </div>
+                        <p class="text-center">
+                          Report Card
+                        </p>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th class="tc-center">
+                        Subject
+                      </th>
+                      <th class="tc-center">
+                        Marks
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let subj of books">
+                      <td class="tc-center"> {{ subj.name }} </td>
+                      <td class="tc-center"> {{ subj.marks }} </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="w-info-chart-meta">
+                <h2 class="text-center">Class Standings</h2>
+                <div style="display: block">
+                  <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+                    (chartHover)="pieCharttHovered($event)" (chartClick)="pieChartClicked($event)">
+                  </canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="w-info-chart-meta">
+                <h2 class="text-left" style="margin: -4px 0px 15px 0px;">Class Results</h2>
+                <div class="table-responsive">
+                  <table class="table table-hover table-bordered matmix-dt bg-hc-border">
+                    <thead>
+                      <tr>
+                        <th class="tc-center" *ngFor="let stand of standings">
+                          {{stand.name}}
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <!-- <th class="tc-center"> {{ stand.name }} </th> -->
+                        <td class="tc-center" *ngFor="let stand of standings"> {{ stand.number }} </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--- POPUP -->
+
+<!-- Modal -->
+<button type="button" style="display: none;" class="btn btn-info btn-lg" id="statModalBtn" data-toggle="modal"
+  data-target="#statModal"></button>
+<div class="modal fade" id="statModal" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"> {{ statsTitle }} </h4>
+      </div>
+      <div class="modal-body">
+        <div class="charts-deep-view">
+          <div class="w-info-graph">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="w-info-chart">
+                  <div class="w-info-chart-header">
+                    <!-- <h2>23,320 Items Sold</h2> -->
+                    <div>
+                      <div style="display: block">
+                        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                          [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)"
+                          (chartClick)="chartClicked($event)"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="download-link" *ngIf="statsTitle == 'Question wise stats'">
+              <a href="../../assets/img/question-paper.pdf" download> Download Question paper </a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<button type="button" style="display: none;" class="btn btn-info btn-lg" id="statModalBtn1" data-toggle="modal"
+  data-target="#statModal"></button>
+<div class="modal fade" id="statModal" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"> {{ statsTitle }} </h4>
+      </div>
+      <div class="modal-body">
+        <div class="charts-deep-view">
+          <div class="w-info-graph">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="w-info-chart">
+                  <div class="w-info-chart-header">
+                    <!-- <h2>23,320 Items Sold</h2> -->
+                    <div>
+                      <div style="display: block">
+                        <canvas baseChart [datasets]="barChartData1" [labels]="barChartLabels1" [options]="barChartOptions"
+                          [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)"
+                          (chartClick)="chartClicked($event)"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="download-link" *ngIf="statsTitle == 'Question wise stats'">
+              <a href="../../assets/img/question-paper.pdf" download> Download Question paper </a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

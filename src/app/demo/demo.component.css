@@ -1,0 +1,117 @@
+.navbar-brand > img {
+    display: block;
+    max-height: 24px;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background: #009688;
+}
+.top-bar {
+    background-color: transparent;
+    margin-top: 30px;
+}
+.navbar-nav > li > a {
+    color: #005b52;
+    background: transparent;
+}
+.demo-wrapper {
+    height: 100vh;
+    background-image: linear-gradient(to left, rgba(0,187,133,0.7), rgba(0,251,248,0.6));
+    background-image: -webkit-linear-gradient(to left, rgba(0,187,133,0.7), rgba(0,251,248,0.6))
+}
+.demo-container {
+    background: url(../../assets/Images/demo-bg.png) 0 0;
+    background-size: contain;
+    height: 100vh;
+}
+.full-height {
+    height: 100vh;
+}
+a {
+    cursor: pointer;
+}
+.main-blk-1{
+    width: 80%;
+}
+.main-blk-2 {
+    width: 20%;
+    overflow: hidden;
+}
+.blk-1 {
+    background: linear-gradient(170deg, #009688 40%, #012c28 100%);
+    transform: rotate(0deg) skewY(10deg);
+    -webkit-transform: rotate(0deg) skewY(10deg);
+    top: -25px;
+    z-index: 9;
+}
+.blk-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* background: brown; */
+    top: -54px;
+    z-index: 1;
+    background: url(../../assets/Images/pie.jpg)
+}
+.blk-2:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #ffffffd6;
+}
+.blk-1, .blk-2{
+    height: 54vh;
+}
+.blk-1 img {
+    max-width: 151px;
+    transform: rotate(0deg) skewY(-10deg);
+    margin: auto;
+    display: block;
+    margin-top: 49px;
+}
+
+.play-wrap {
+    /* position: absolute; */
+    right: 0;
+    left: 0;
+    bottom: 19.5%;
+    margin: auto;
+    width: 140px;
+    height: 140px;
+    z-index: 2;
+}
+.title {
+    margin-bottom: 20px;
+}
+.video-play-btn {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    width: 96px;
+    height: 96px;
+    background: none;
+    border: 1px solid #005C5B;
+    border-radius: 50%;
+}
+.video-play-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 6%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-width: 20px 0 20px 28px;
+    border-style: solid;
+    border-color: transparent #005C5B;
+    font-size: 0;
+    line-height: 0;
+}

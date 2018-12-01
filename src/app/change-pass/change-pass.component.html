@@ -1,0 +1,31 @@
+<!-- ---------------------  chnage password  ---------------------------------- -->
+<div class="login-wrapper">
+  <div class="page-container">
+    <div class="login-container">
+      <img class="login-img" src="../../assets/Images/logo.png" alt="login thumb">
+      <form class="form-signin" #loginForm="ngForm" (ngSubmit)="login(UserName.value,Password.value)">
+        <!-- <div class="floatlabel-wrapper">
+          <input type="password" #Password ngModel name="Password" placeholder="Old Password" class="form-control" required>
+        </div> -->
+        <div class="floatlabel-wrapper">
+          <input type="password" #newPassword ngModel name="Password" placeholder="New Password" class="form-control" required>
+        </div>
+        <div class="floatlabel-wrapper">
+          <input type="password" #conPassword ngModel name="Password" placeholder="Confirm Password" class="form-control" required>
+        </div>
+        <br>
+        <button [disabled]="!loginForm.valid" class="btn btn-primary theme-btn fullWidth" type="submit">Sign In</button>
+      </form>
+
+      <!-- <a href="#" class="forgot-password">
+        Forgot Password?
+      </a> -->
+    </div>
+    <!-- <div class="create-account">
+      <a href="#">
+        Create Account
+      </a>
+    </div> -->
+
+  </div>
+</div>

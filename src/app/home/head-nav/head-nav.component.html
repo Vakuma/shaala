@@ -1,0 +1,101 @@
+<header class="top-bar">
+  <div class="container-fluid top-nav">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="clearfix top-bar-action">
+          <a class="navbar-brand pointer" [routerLink]="['/home', 'dashboard']">
+            <img src="../../assets/Images/logo.png" alt="" style="max-height: 30px;">
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4 responsive-fix top-mid">
+
+      </div>
+      <div class="col-md-6 responsive-fix">
+        <div class="top-aside-right">
+
+          <div class="user-nav">
+            <ul>
+              <li class="dropdown">
+                <a data-toggle="dropdown" href="#" class="clearfix dropdown-toggle waves-effect waves-block waves-classic">
+                  <span class="user-info">Sagar Bharadwaj <cite>sagar@gmail.com</cite></span>
+                  <span class="user-thumb g-s">
+                    <!-- <img src="../../../assets/Images/dp.jpg" alt="image" width="46" height="46"></span> -->
+                    <span class="g-style">
+                      SB
+                    </span>
+                  </span>
+                </a>
+                <ul role="menu" class="dropdown-menu fadeInUp">
+                  <li class="pointer" [routerLink]="['/home', 'welcome']">
+                    <a>
+                      <span class="user-nav-icon">
+                        <i class="fa fa-user"></i>
+                      </span>
+                      <span class="user-nav-label">
+                        View Profile
+                      </span>
+                    </a>
+                  </li>
+                  <li><a href="#"><span class="user-nav-icon"><i class="fa fa-lock"></i></span><span class="user-nav-label">Logout</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="user-nav exams-dropdown">
+            <ul>
+              <li class="dropdown">
+                <a data-toggle="dropdown" href="#" class="clearfix dropdown-toggle waves-effect waves-block waves-classic">
+                  <span class="user-info">
+                    {{selectedExam}}
+                  </span>
+                  <span class="user-thumb">
+                    <i class="ico-chevron-thin-down"> </i>
+                  </span>
+                </a>
+                <ul role="menu" class="dropdown-menu fadeInUp">
+                  <li>
+                    <a *ngFor="let exam of exams; let i = index;" (click)="selectExam(exam.name)" class="pointer">
+                      <!-- <span class="user-nav-icon"><i class="fa fa-user"></i></span> -->
+                      <span class="user-nav-label"> {{ exam.name }} </span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
+          <div class="notification-nav">
+            <ul class="clearfix">
+              <li class="dropdown"><a href="#" data-toggle="dropdown" class="hide-small-device waves-effect "><i class="fa fa-bell"></i><span
+                    class="alert-bubble">2</span></a>
+                <div role="menu" class="dropdown-menu notification-dropdown fadeInUp noty-lists hide-small-device">
+                  <div class="notification-wrap">
+                    <h4>You have 2 new notifications</h4>
+                    <ul>
+                      <li><a href="#" class="clearfix"><span class="ni w-green"><i class="fa fa-bullhorn"></i></span><span
+                            class="notification-message">Semester 3 results has been updated <span class="notification-time clearfix">3
+                              Min Ago</span></span></a>
+                      </li>
+                      <li><a href="#" class="clearfix"><span class="ni w-orange"><i class="fa fa-life-ring"></i></span><span
+                            class="notification-message">January 29th is the last day for fee settlement. <span class="notification-time clearfix">1
+                              Hours Ago</span></span></a>
+                      </li>
+                    </ul>
+                    <a class="btn btn-primary btn-block notification-btn clearfix waves-effect" href="#"><span>View
+                        All</span></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

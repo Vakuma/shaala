@@ -1,0 +1,45 @@
+
+     /*----------- forgot-pass.css -----------*/
+     .login-logo img {
+        width: 70px;
+        height: 24px;
+    }
+
+    
+    .sls-cancel-btn, .sls-cancel-btn:hover, .sls-cancel-btn:focus {
+        padding: 10px 10px !important;
+        height: 56px !important;
+        background: #FFA000;
+    }
+
+    .val-message {
+		margin: 20px auto;
+		width: 600px;
+		padding: 20px 30px 10px;       
+	}
+	.val-success {
+		background: #f4fcee;
+		border: 2px solid #91e458;
+	}
+	
+	.val-error{
+		color: #a94442;
+		background-color: #f2dede;
+		border-color: #ebccd1;
+        width:470px;
+        padding: 13px 40px 10px !important;
+    }
+
+    .val-error i {
+        size: 30px;
+        position: absolute;
+        left: 6px;
+        top: 10px;
+    }
+
+    .authentication-wrapper.authentication-2 {
+        flex-direction: column;
+    }
+    .pointer {
+        cursor: pointer;
+    }

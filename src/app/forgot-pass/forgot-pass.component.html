@@ -1,0 +1,57 @@
+<div class="authentication-wrapper authentication-2 px-4">
+  
+  <div class="authentication-inner py-5" *ngIf='!success'>
+    <!-- Form -->
+    <form class="card" name="forogotpass" #fp="ngForm" (ngSubmit)="submit(fp.value)">
+      <div class="p-4 p-sm-5">
+
+        <!-- Logo -->
+        <div class="d-flex justify-content-center align-items-center pb-2">
+          <div class="w-100 position-relative text-center">
+            <img src="" alt="" style="max-height: 65px;" #logoEle>
+          </div>
+        </div>
+        <!-- / Logo -->
+
+        <!-- <h5 class="text-center text-muted font-weight-normal mb-4">Send Email</h5> -->
+
+        <hr class="mt-0 mb-4">
+
+        <p>
+          Enter your email address and we will send you a link to reset your password.
+        </p>
+
+        <div class="form-group">
+          <input id="emailAddress" name="emailAddress" placeholder="Email Address" #em="ngModel" ngModel type="text" value="" required
+            pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" class="form-control" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input id="username" name="username" placeholder="Username" class="form-control" ngModel type="text" value="" required>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-block" type="submit" id="submitBtn" [disabled]="!fp.valid">Submit</button>
+
+      </div>
+    </form>
+    <!-- / Form -->
+
+  </div>
+  <div class="success-failure-msg-block">
+
+      <div class="val-message val-success" *ngIf='success'>
+        <span style="color:green;"> <i class="fa fa-check-square-o fa-2x" aria-hidden="true" style="size:40px;"></i> </span>
+        <span>A Reset Link has been sent to {{this.emaiID}}. Please use the same to reset your Password.</span>
+        <p style="margin-top:10px;">If you don't see this email in your inbox within 15 minutes, look for it in your junk mail
+          folder. If you find it there, please mark the email as "Not Junk". 
+          <a class="pointer" routerLink="/login"> click here </a> to login </p>
+        <p></p>
+      </div>
+  
+      <div class="val-message val-error text-center" *ngIf='errorOccured'>
+        <div style="color:red;"> <i class="fa fa-window-close fa-2x" aria-hidden="true" style="size:30px;"></i>
+          {{errorMsg}}
+        </div>
+      </div>
+  
+    </div>
+</div>

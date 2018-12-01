@@ -1,0 +1,19 @@
+.login-img {
+    height: 28px;
+    margin: 16px 10px;
+}
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login-container .forgot-password {
+    font-size: 12px !important;
+    text-align: right !important;
+}
+.login-container {
+    width: 340px !important;
+    margin: auto;
+    padding: 26px 26px !important;
+}

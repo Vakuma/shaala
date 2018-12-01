@@ -1,0 +1,185 @@
+
+
+.panel-before {
+    padding: 8px 10px;
+    background-color: #f8f8f8;
+}
+
+.panel-before .btn {
+    font-size: 12px;
+    padding: 6px 12px;
+}
+
+#imaginary_container{
+    max-width: 200px;
+    display: inline-block;
+}
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+    border-color:#ccc;
+    height: 32px;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+.table-bordered>thead>tr>th {
+    padding: 10px 4px;
+}
+
+.registrations.edit .edit-name-link, .registrations.update .edit-name-link {
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 5px;
+    color: #737373;
+    opacity: 0.7;
+    line-height: 12px;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+.edit-name-link {
+    font-size: 11px;
+    color: gray;
+}
+
+.mainContentHolder {
+    margin-top: 42px;
+}
+
+.margin-block {
+    margin-bottom: 10px;
+    clear: both;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.selected-list .c-btn {
+    width: 100%;
+    box-shadow: none !important;
+    padding: 5px 10px !important;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    font-size: 12px !important;
+}
+.label {
+    cursor: pointer;
+    margin-right: 8px;
+    display: inline-block;
+}
+.ui-calendar {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.ui-calendar input {
+    width: 100%;
+}
+.saa-alert-danger{
+    position: fixed;
+    top: 70px;
+    right: 0;
+    padding: 5px 35px;
+    padding-left: 20px;
+    border: 0;
+    font-size: 13px;
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+}
+.saa-alert-success {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    padding: 5px 35px;
+    padding-left: 20px;
+    border: 0;
+    font-size: 13px;
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+}
+
+.saa-alert-success a {
+    position: absolute;
+    top: 6px;
+    right: 13px;
+}
+
+.access-denied {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0px;
+    justify-content: center;
+    display: flex;
+    background: white;
+    bottom: 0;
+    padding-top: 5%;
+}
+
+.ins {
+    background: #f1eeee;
+    padding: 2px 6px;
+    margin: 2px 3px 3px 2px;
+    display: inline-block;
+    box-shadow: 1px 1px 1px #dadada;
+}
+.disclimer {
+    text-align: center;
+    padding: 10px;
+    box-shadow: 4px -1px 4px 0px lightgrey;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #f9f8f8;
+    z-index: 9;
+}
+.disclaimer {
+    text-align: center;
+    position: absolute;
+    /* box-shadow: 0px 0px 0px 0px lightgrey; */
+    font-size: 12px;
+    width: 100%;
+    margin-left: -28px;
+    background: #f9f8f8;
+    margin-top: 3px;
+    margin-bottom: 11px;
+    /* padding-bottom: 5px; */
+    z-index: 9;
+
+}
+/* ----------- Calendar Schedular CSS -------------- */
+
+.dx-scheduler-group-header-content div {
+    position: relative;
+}
+.dx-scheduler-work-space {
+    padding-top: 44px !important;
+}
+.dx-scheduler-work-space-month .dx-scheduler-appointment {
+    background: #03A9F4 !important;
+}
+.dx-scheduler-appointment-popup {
+    display: none;
+}
+.dx-scheduler-appointment-tooltip-buttons {
+display: none;
+}
+.dx-scheduler-view-switcher {
+    display: none !important;
+}
+.dx-scheduler-view-switcher-label {
+    display: none;
+}
