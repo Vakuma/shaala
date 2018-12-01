@@ -1,0 +1,3 @@
+﻿MerchantId,Amount,Currency,Bank Code,Bank Name,Bank Branch,Customer Name, Bank Account Name, Bank Account Number, Cart Id, Province, City, Notify URL
+126,"10.00","CNY","ICBC","CustBank","CustBranch","Customer 1","CustAccnt","11122223333","2018-01-28-Test01","CustProvince","CustCity","http://notify.url"
+126,"10.00","CNY","ICBC","CustBank","CustBranch","Customer 1","CustAccnt","11122223333","2018-01-28-Test01","CustProvince","CustCity","http://notify.url"

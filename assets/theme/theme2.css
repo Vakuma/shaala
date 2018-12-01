@@ -1,0 +1,31 @@
+.btn-primary.disabled, .btn-primary:disabled,
+.btn-primary{
+    background: #042F5E !important;
+}
+.page-item.active .page-link, .page-item.active .page-link:hover, .page-item.active .page-link:focus, .pagination li.active > a:not(.page-link), .pagination li.active > a:not(.page-link):hover, .pagination li.active > a:not(.page-link):focus {
+    border-color: #042f5f !important;
+    background-color: #042f5f !important;
+    color: #fff !important;
+}
+.details-card .card-header,
+.btn-success.disabled, .btn-success:disabled,
+.btn-success,
+.dropdown-item:not(.disabled).active, .dropdown-item:not(.disabled):active,
+.layout-navbar .navbar {
+   background:#00254d !important
+}
+
+.details-card .card-header{
+    color: white !important;
+}
+
+.dropdown-item:not(.disabled).active, .dropdown-item:not(.disabled):active,
+.nav-link {
+    color: white !important;
+}
+.nav-link::before {
+    background-color: #d73c31 !important;
+}
+.ion-md-help-circle-outline {
+    color: #6a87a7 !important;
+}

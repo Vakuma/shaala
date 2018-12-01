@@ -1,0 +1,30 @@
+@media screen and (max-width: 767px) {
+    .main-blk-1 {
+        width: 100% !important;
+    }
+    .main-blk-2 {
+        width: 100% !important;
+    }
+}
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    .application-back .dashboard-header .nav-link a {
+        border-bottom: 0;
+        margin: 0;
+        padding: 20px 0px;
+        font-size: 13px;
+        margin: 0 7px;
+        color: #5a5a5a;
+        transition: all 100ms ease-in-out;
+        border-bottom: 2px solid #fff;
+        height: 66px;
+    }
+    .application-back .dashboard-header .navbar-brand {
+        padding: 17px 0px 17px 20px;
+        height: auto;
+    }
+}

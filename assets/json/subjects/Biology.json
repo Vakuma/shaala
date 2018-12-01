@@ -1,0 +1,43 @@
+{
+   "marks": [
+      {
+         "id": 1,
+         "name": "Total Marks",
+         "marks": 25
+      },
+      {
+         "id": 2,
+         "name": "Avg. Marks",
+         "marks": 15
+      },
+      {
+         "id": 4,
+         "name": "Highest marks",
+         "marks": 25
+      },
+      {
+         "id": 5,
+         "name": "Lowest",
+         "marks": 12
+      },
+	  {
+         "id": 3,
+         "name": "Marks Obtained",
+         "marks": 24
+      }
+   ],
+   "insights": [
+      {
+         "id": 1,
+         "name": "Conceptually sound and has vey good understanding."
+      },
+      {
+         "id": 2,
+         "name": "Very good noting and composing abilities."
+      },
+      {
+         "id": 3,
+         "name": "Time management is good."
+      }
+   ]
+}
